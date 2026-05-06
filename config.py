@@ -20,11 +20,10 @@ class Config:
     JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY", "jwt-dev-secret")
 
     # 🗄 MySQL database connection
-
     # SQLAlchemy database connection string
     # Connects Flask app to MySQL database (authors_db)
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") or \
-        "mysql+pymysql://root:@localhost/authors_db"
+    SQLALCHEMY_DATABASE_URI ="mysql+pymysql://root:@localhost/flask_authors_db"
 
     # Disables SQLAlchemy event tracking (improves performance)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+

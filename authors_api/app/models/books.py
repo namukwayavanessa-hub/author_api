@@ -7,8 +7,6 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(150), nullable=False)
 
-    author_id = db.Column(db.Integer, db.ForeignKey('authors.id'), nullable=False)
-
     pages = db.Column(db.Integer, nullable=False)
     price_unit = db.Column(db.String(50), nullable=False, default='UGX')
     publication_date = db.Column(db.Date, nullable=False)
